@@ -3,6 +3,10 @@ import hashlib
 import binascii
 import sys
 buffersize = 4096
+
+if len(sys.argv)>1:
+    os.chdir(sys.argv[1])
+    
 for path, directories, files in os.walk('.'):
     for filename in files:
         try:
