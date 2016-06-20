@@ -10,5 +10,5 @@ for bucket in s3.buckets.all():
     #sizesum=0
     for key in bucket.objects.all():
         print key.key, key.e_tag.replace('"',''),key.size
-        sizesum+=key.size
+        #sizesum+=key.size
     #print sizesum
