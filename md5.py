@@ -18,6 +18,6 @@ for path, directories, files in os.walk('.'):
                 while len(byte):
                     m.update(byte)
                     byte = f.read(buffersize)
-                print fullfilename,binascii.hexlify(bytearray(m.digest())),size
+                print unicode(fullfilename),binascii.hexlify(bytearray(m.digest())),size
         except IOError as error:
             print >> sys.stderr, error
